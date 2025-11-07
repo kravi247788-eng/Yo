@@ -1,0 +1,191 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAVI YADAV -- Connect</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+    :root{
+      --bg:#050507;
+      --accent1:#ff007a;
+      --accent2:#00eaff;
+      --accent3:#a855ff;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',sans-serif;
+      background: radial-gradient(circle at 25% 10%, rgba(255,0,120,0.06), transparent 8%),
+                  radial-gradient(circle at 80% 90%, rgba(0,220,255,0.04), transparent 10%),
+                  var(--bg);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      overflow:hidden;
+    }
+
+    /* Background glow */
+    .aura{
+      position:absolute;
+      inset:-40%;
+      background: conic-gradient(from 0deg, var(--accent1), var(--accent3), var(--accent2), var(--accent1));
+      filter: blur(130px);
+      opacity:.22;
+      animation: rotate 20s linear infinite;
+      z-index:0;
+    }
+    @keyframes rotate{to{transform:rotate(360deg)}}
+
+    /* Main card */
+    .card{
+      position:relative;
+      z-index:2;
+      width:90%;
+      max-width:420px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(15px);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:20px;
+      padding:40px 25px;
+      text-align:center;
+      box-shadow:0 0 30px rgba(0,0,0,0.5),0 0 20px rgba(170,85,255,0.1);
+    }
+
+    /* DP with rings */
+    .dp-ring{
+      position:relative;
+      width:160px;
+      height:160px;
+      margin:0 auto 20px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .dp-ring::before, .dp-ring::after{
+      content:'';
+      position:absolute;
+      border-radius:50%;
+      inset:0;
+      border:3px solid transparent;
+      border-top-color:var(--accent1);
+      border-right-color:var(--accent2);
+      border-bottom-color:var(--accent3);
+      animation: spin 8s linear infinite;
+      opacity:.8;
+    }
+
+    .dp-ring::after{
+      inset:8px;
+      border-width:2px;
+      filter:blur(2px);
+      animation-duration:12s;
+      opacity:.6;
+    }
+
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .dp-ring img{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid rgba(255,255,255,0.2);
+      z-index:2;
+      box-shadow:0 0 25px rgba(255,255,255,0.15);
+    }
+
+    h1{
+      font-size:1.8em;
+      font-weight:800;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2),var(--accent3));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:8px;
+    }
+
+    p{
+      color:rgba(255,255,255,0.7);
+      font-size:14px;
+      margin-bottom:22px;
+    }
+
+    .socials{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .social{
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      transition:all .3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .social:hover{
+      transform:scale(1.12);
+      box-shadow:0 0 20px var(--accent2);
+    }
+
+    .social img{
+      width:34px;
+      height:34px;
+      filter:brightness(0) invert(1);
+    }
+
+    footer{
+      position:absolute;
+      bottom:15px;
+      font-size:12px;
+      color:rgba(255,255,255,0.45);
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      .card{padding:30px 15px}
+      .social{width:60px;height:60px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="aura"></div>
+
+  <div class="card">
+    <div class="dp-ring">
+      <img src="https://i.postimg.cc/jLPSv6zd/image.jpg" alt="RAVI YADAV">
+    </div>
+
+    <h1>RAVI YADAV</h1>
+    <p>Connect with me -- Instagram | WhatsApp | Facebook</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/ravi_0887_king?igsh=ZzBxejZ3eDdxOGl1" target="_blank" class="social">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/ravi_0887_king" target="_blank" class="social">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://wa.me/917011459656" target="_blank" class="social">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
+    </div>
+  </div>
+
+  <footer>© 2025 RAVI YADAV -- All Rights Reserved</footer>
+</body>
+</html>
